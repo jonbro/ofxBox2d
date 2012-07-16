@@ -15,7 +15,7 @@ ofxBox2dBaseShape::ofxBox2dBaseShape() {
 	setMassFromShape = true;
 	dead  = false;
 	alive = false;
-	
+	sensor = false;
 	body  = NULL;
 	
 	density     = 0.0;
@@ -41,7 +41,7 @@ void ofxBox2dBaseShape::destroy() {
 	dead  = true;
 	alive = false;
 	
-	//printf("--- dead ---\n");
+//	printf("--- dead ---\n");
 }
 
 //----------------------------------------
@@ -114,6 +114,10 @@ void ofxBox2dBaseShape::setPhysics(float density, float bounce, float friction) 
 	this->density = density; this->bounce = bounce; this->friction = friction;
 }
 
+void ofxBox2dBaseShape::setSensor(bool sensor)
+{
+    this->sensor = sensor;
+}
 
 //------------------------------------------------ 
 void* ofxBox2dBaseShape::setData(void*data) {

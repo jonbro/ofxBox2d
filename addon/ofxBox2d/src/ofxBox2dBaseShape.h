@@ -18,6 +18,7 @@ public:
 	float			density;
 	float			bounce;
 	float			friction;
+    bool            sensor;
 	ofxBox2dBaseShape();	
 	
 	//----------------------------------------
@@ -48,6 +49,9 @@ public:
 	
 	//------------------------------------------------ 
 	virtual void setPhysics(float density, float bounce, float friction);
+
+	//------------------------------------------------ 
+	virtual void setSensor(bool sensor);
 	
 
 	//------------------------------------------------ 

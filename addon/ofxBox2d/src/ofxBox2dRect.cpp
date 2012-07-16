@@ -43,6 +43,7 @@ void ofxBox2dRect::setup(b2World * b2dworld, float x, float y, float w, float h)
 	fixture.shape		= &shape;
 	fixture.density		= density;
 	fixture.friction	= friction;
+    fixture.isSensor    = sensor;
 	fixture.restitution = bounce;
 	
 	b2BodyDef bodyDef;
